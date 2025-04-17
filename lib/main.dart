@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Dotech',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: MainScreen(),
+      home: NavBar(),
     );
   }
 }

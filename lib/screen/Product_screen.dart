@@ -3,6 +3,8 @@ import 'package:dotech/model/cart_model.dart';
 import 'package:dotech/product/product_list.dart';
 import 'package:dotech/screen/cart_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/state_manager.dart';
 import 'package:provider/provider.dart';
 
 class ProductScreen extends StatelessWidget {
@@ -77,6 +79,14 @@ class ProductScreen extends StatelessWidget {
                   trailing: TextButton(
                     onPressed: () {
                       cart.addToCart(product);
+                      Get.showSnackbar(
+                        GetSnackBar(
+                          title: 'Added to Cart',
+                          message:
+                              '${product.name} has been added to your cart.',
+                          duration: Duration(seconds: 2),
+                        ),
+                      );
                     },
                     child: Text(
                       'add+',
