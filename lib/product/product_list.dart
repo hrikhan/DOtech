@@ -18,13 +18,13 @@ class ProductList {
       name: 't-shirts',
       description: 'Trendy t-shirts made from breathable fabric.',
       price: 80,
-      imageUrl: 'assets/360_F_334796865_VVTjg49nbLgQPG6rgKDjVqSb5XUhBVsW.jpg',
+      imageUrl: 'assets/premium_photo-1723925110801-110c00d392a3.jpeg',
     ),
     Product(
       name: 'shoes',
       description: 'Durable and stylish shoes for all-day comfort.',
       price: 150,
-      imageUrl: 'assets/istockphoto-488160041-612x612.jpg',
+      imageUrl: 'assets/premium_photo-1723925110801-110c00d392a3.jpeg',
     ),
     Product(
       name: 'shoes',

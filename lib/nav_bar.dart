@@ -6,16 +6,15 @@ import 'package:dotech/screen/user_information.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-class MainScreen extends StatelessWidget {
-  MainScreen({super.key});
+class NavBar extends StatelessWidget {
+  NavBar({super.key});
 
   final BottomNavController _controller = Get.put(BottomNavController());
 
   final List<Widget> _screens = [
-   ProductScreen(),
+    ProductScreen(),
     CartScreen(),
-    UserInformation()
+    UserListScreen(),
   ];
 
   @override
@@ -23,7 +22,6 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: GetBuilder<BottomNavController>(
         builder: (_) {
-        
           return _screens[_controller.currentIndex.value];
         },
       ),
@@ -32,7 +30,7 @@ class MainScreen extends StatelessWidget {
           return BottomNavigationBar(
             currentIndex: _controller.currentIndex.value,
             onTap: (index) {
-              _controller.updateIndex(index);  
+              _controller.updateIndex(index);
             },
             selectedItemColor: Colors.blue,
             unselectedItemColor: Colors.grey,
